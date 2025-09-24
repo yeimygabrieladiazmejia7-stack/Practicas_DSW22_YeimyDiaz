@@ -1,0 +1,39 @@
+fun main() {
+    val num1 = 10
+    val num2 = 5
+
+    val operadores = listOf("suma", "resta", "multiplicacion", "division")
+
+    for (operador in operadores) {
+        val resultado = calcular(num1, num2, operador)
+        if (resultado != null) {
+            println("El resultado de la $operador es $resultado")
+        } else {
+            println("Operación '$operador' inválida o error en los parámetros")
+        }
+    }
+
+    // Aquí también imprimimos la variable 'kotlin'
+    val kotlin = "Ejemplo de texto en Kotlin"
+    println(kotlin)
+}
+
+fun calcular(num1: Int, num2: Int, operador: String): Int? {
+    return when (operador.lowercase()) {
+        "suma" -> num1 + num2
+        "resta" -> num1 - num2
+        "multiplicacion" -> num1 * num2
+        "division" -> {
+            if (num2 == 0) {
+                println("Error: División por cero no permitida")
+                null
+            } else {
+                num1 / num2
+            }
+        }
+        else -> {
+            println("Error: Operador no válido")
+            null
+        }
+    }
+}
