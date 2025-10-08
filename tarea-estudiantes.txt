@@ -1,0 +1,33 @@
+data class Direccion(
+    val departamento: String,
+    val municipio: String,
+    val distrito: String,
+    val complemento: String
+)
+
+data class Estudiante(
+    val nombre: String,
+    val carnet: String,
+    val edad: Int,
+    val carrera: String,
+    val direccion: Direccion
+)
+
+fun main() {
+    
+    val direccion1 = Direccion("San Salvador", "Soyapango", "Distrito 1", "Col. Las Margaritas")
+    val direccion2 = Direccion("La Libertad", "Santa Tecla", "Distrito 3", "Residencial El Carmen")
+    val direccion3 = Direccion("Santa Ana", "Chalchuapa", "Distrito 2", "Barrio El Centro")
+    val direccion4 = Direccion("San Miguel", "Ciudad Barrios", "Distrito 5", "Final Av. Central")
+    val direccion5 = Direccion("Cuscatlán", "Cojutepeque", "Distrito 4", "Col. Los Ángeles")
+
+   
+    val student1 = Estudiante("Carlos", "DS001", 20, "Desarrollo de Software", direccion1)
+    val student2 = Estudiante("Feliciano", "DS002", 18, "Desarrollo de Software", direccion2)
+    val student3 = Estudiante("Lodovico", "DS003", 19, "Desarrollo de Software", direccion3)
+    val student4 = Estudiante("Juan", "DS004", 21, "Desarrollo de Software", direccion4)
+    val student5 = Estudiante("lindsay", "DS005", 19, "Desarrollo de Software", direccion5)
+
+   
+    println(student5)
+}
